@@ -223,7 +223,7 @@ KB Creations
 Professional Photography Services for Weddings, Events & Shoots
 </p>
 
-<button class="btn">
+<button class="btn" onclick="openForm()">
 Book Now
 </button>
 
@@ -306,5 +306,120 @@ Complete photography coverage for all your special events.
 
 </footer>
 
-</body>
+<!-- POPUP FORM -->
+
+<div id="bookingForm" class="popup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closeForm()">&times;</span>
+
+<h2>Book Your Shoot</h2>
+
+<input type="text" id="name" placeholder="Enter Your Name">
+
+<input type="tel" id="mobile" placeholder="Enter 10 Digit Mobile Number" maxlength="10">
+
+<button onclick="submitForm()">Submit</button>
+
+<p id="message"></p>
+
+</div>
+
+</div>
+
+<style>
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+
+.popup-content{
+background:#222;
+padding:30px;
+border-radius:15px;
+width:320px;
+text-align:center;
+}
+
+.popup-content h2{
+color:#ffcc70;
+margin-bottom:20px;
+}
+
+.popup-content input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+
+.popup-content button{
+padding:12px 25px;
+background:#ffcc70;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.close{
+float:right;
+font-size:28px;
+cursor:pointer;
+color:white;
+}
+
+#message{
+margin-top:15px;
+color:#ffcc70;
+}
+
+</style>
+
+<script>
+
+function openForm(){
+document.getElementById("bookingForm").style.display="flex";
+}
+
+function closeForm(){
+document.getElementById("bookingForm").style.display="none";
+}
+
+function submitForm(){
+
+let name=document.getElementById("name").value;
+let mobile=document.getElementById("mobile").value;
+
+let indianMobile=/^[6-9][0-9]{9}$/;
+
+if(name==""){
+document.getElementById("message").innerHTML="Please enter name";
+return;
+}
+
+if(!indianMobile.test(mobile)){
+document.getElementById("message").innerHTML="Enter valid Indian mobile number";
+return;
+}
+
+document.getElementById("message").innerHTML=
+"Booking submitted successfully!";
+
+}
+
+</script>
+  
 </html>
