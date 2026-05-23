@@ -22,99 +22,9 @@ color:white;
 overflow-x:hidden;
 }
 
-/* ======================
-   LOCK SCREEN
-====================== */
-
-#lockScreen{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:
-linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
-url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2070&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:99999;
-padding:20px;
-}
-
-.lock-box{
-width:100%;
-max-width:450px;
-background:rgba(0,0,0,0.85);
-padding:40px 30px;
-border-radius:25px;
-text-align:center;
-border:1px solid rgba(255,204,112,0.3);
-backdrop-filter:blur(8px);
-}
-
-.brand{
-font-size:42px;
-font-weight:bold;
-color:#ffcc70;
-margin-bottom:10px;
-}
-
-.tagline{
-font-size:18px;
-margin-bottom:30px;
-color:#ddd;
-}
-
-.lock-box h1{
-font-size:48px;
-color:#ffcc70;
-margin-bottom:25px;
-line-height:1.2;
-}
-
-.lock-box input,
-.lock-box select{
-width:100%;
-padding:16px;
-margin:12px 0;
-border:none;
-border-radius:12px;
-font-size:16px;
-outline:none;
-background:#f1f1f1;
-}
-
-.lock-box button{
-width:100%;
-padding:16px;
-margin-top:18px;
-background:#ffcc70;
-color:black;
-border:none;
-border-radius:12px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-transition:0.3s;
-}
-
-.lock-box button:hover{
-background:white;
-transform:scale(1.03);
-}
-
-#msg{
-margin-top:20px;
-color:#ffcc70;
-font-size:16px;
-}
-
-/* ======================
-   HEADER
-====================== */
+/* =========================
+HEADER
+========================= */
 
 header{
 position:fixed;
@@ -131,7 +41,7 @@ border-bottom:1px solid rgba(255,204,112,0.2);
 }
 
 .logo{
-font-size:32px;
+font-size:34px;
 font-weight:bold;
 color:#ffcc70;
 }
@@ -148,14 +58,14 @@ nav a:hover{
 color:#ffcc70;
 }
 
-/* ======================
-   HERO
-====================== */
+/* =========================
+HERO
+========================= */
 
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
 url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2070&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
@@ -167,41 +77,58 @@ padding:20px;
 }
 
 .hero-box{
-background:rgba(0,0,0,0.65);
+background:rgba(0,0,0,0.6);
 padding:60px;
 border-radius:25px;
-max-width:900px;
+max-width:1000px;
 }
 
 .hero h1{
-font-size:70px;
+font-size:78px;
 color:#ffcc70;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:24px;
+font-size:26px;
 line-height:1.6;
+margin-bottom:35px;
 }
 
-/* ======================
-   COMMON SECTION
-====================== */
+.hero button{
+padding:18px 40px;
+font-size:20px;
+font-weight:bold;
+background:#ffcc70;
+border:none;
+border-radius:12px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:white;
+transform:scale(1.05);
+}
+
+/* =========================
+COMMON SECTION
+========================= */
 
 section{
 padding:90px 8%;
 }
 
 .section-title{
-text-align:center;
 font-size:45px;
 color:#ffcc70;
+text-align:center;
 margin-bottom:50px;
 }
 
-/* ======================
-   RECENT PHOTOS
-====================== */
+/* =========================
+RECENT PHOTOS
+========================= */
 
 .photo-grid{
 display:flex;
@@ -222,9 +149,9 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* ======================
-   SERVICES
-====================== */
+/* =========================
+SERVICES
+========================= */
 
 .service-container{
 display:flex;
@@ -253,17 +180,17 @@ color:#ffcc70;
 margin-bottom:15px;
 }
 
-/* ======================
-   GALLERY
-====================== */
+/* =========================
+GALLERY
+========================= */
 
 .gallery-category{
 margin-bottom:70px;
 }
 
 .gallery-category h3{
-color:#ffcc70;
 font-size:35px;
+color:#ffcc70;
 margin-bottom:25px;
 text-align:center;
 }
@@ -287,9 +214,9 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* ======================
-   CONTACT
-====================== */
+/* =========================
+CONTACT
+========================= */
 
 .contact{
 text-align:center;
@@ -300,14 +227,14 @@ font-size:22px;
 margin:14px 0;
 }
 
-/* ======================
-   SUBSCRIBE
-====================== */
+/* =========================
+SUBSCRIBE
+========================= */
 
 .subscribe{
 background:#1a1a1a;
-text-align:center;
 padding:70px 20px;
+text-align:center;
 }
 
 .subscribe input{
@@ -326,14 +253,13 @@ background:#ffcc70;
 border:none;
 border-radius:12px;
 font-weight:bold;
-margin-left:10px;
 cursor:pointer;
 margin-top:20px;
 }
 
-/* ======================
-   FOOTER
-====================== */
+/* =========================
+FOOTER
+========================= */
 
 footer{
 background:black;
@@ -342,14 +268,94 @@ text-align:center;
 font-size:18px;
 }
 
-/* ======================
-   MOBILE
-====================== */
+/* =========================
+POPUP FORM
+========================= */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+justify-content:center;
+align-items:center;
+z-index:99999;
+padding:20px;
+}
+
+.popup-box{
+width:100%;
+max-width:450px;
+background:#111;
+padding:40px 30px;
+border-radius:25px;
+text-align:center;
+border:1px solid rgba(255,204,112,0.3);
+position:relative;
+}
+
+.close{
+position:absolute;
+top:15px;
+right:20px;
+font-size:32px;
+cursor:pointer;
+color:white;
+}
+
+.popup-box h1{
+font-size:45px;
+color:#ffcc70;
+margin-bottom:25px;
+}
+
+.popup-box input,
+.popup-box select{
+width:100%;
+padding:16px;
+margin:12px 0;
+border:none;
+border-radius:12px;
+font-size:16px;
+outline:none;
+}
+
+.popup-box button{
+width:100%;
+padding:16px;
+background:#ffcc70;
+border:none;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+margin-top:18px;
+}
+
+#msg{
+margin-top:20px;
+color:#ffcc70;
+}
+
+/* =========================
+LOCKED CONTENT
+========================= */
+
+.locked{
+display:none;
+}
+
+/* =========================
+MOBILE
+========================= */
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:42px;
+font-size:48px;
 }
 
 .hero p{
@@ -357,7 +363,7 @@ font-size:18px;
 }
 
 .hero-box{
-padding:30px;
+padding:35px;
 }
 
 header{
@@ -377,14 +383,6 @@ font-size:16px;
 font-size:28px;
 }
 
-.brand{
-font-size:34px;
-}
-
-.lock-box h1{
-font-size:38px;
-}
-
 }
 
 </style>
@@ -392,71 +390,9 @@ font-size:38px;
 
 <body>
 
-<!-- ======================
-     LOCK SCREEN
-====================== -->
-
-<div id="lockScreen">
-
-<div class="lock-box">
-
-<div class="brand">
-KB Creations
-</div>
-
-<div class="tagline">
-Professional Photography Studio 📸
-</div>
-
-<h1>
-Book Your Shoot
-</h1>
-
-<input type="text" id="name" placeholder="Enter Your Name">
-
-<input type="date" id="date">
-
-<input type="tel" id="mobile" placeholder="Enter Mobile Number">
-
-<select id="shootType">
-
-<option>Select Shoot Type</option>
-
-<option>Wedding Shoot</option>
-
-<option>Pre Wedding Shoot</option>
-
-<option>Post Wedding Shoot</option>
-
-<option>Baby Shoot</option>
-
-<option>Name Ceremony</option>
-
-<option>Candid Shoot</option>
-
-<option>Nature Photography</option>
-
-<option>Animals Photography</option>
-
-<option>Bird Photography</option>
-
-<option>Flower Photography</option>
-
-</select>
-
-<button onclick="unlockWebsite()">
-Continue
-</button>
-
-<p id="msg"></p>
-
-</div>
-
-</div>
-
-<!-- ======================
-     HEADER
-====================== -->
+<!-- =========================
+HEADER
+========================= -->
 
 <header>
 
@@ -473,9 +409,9 @@ KB Creations
 
 </header>
 
-<!-- ======================
-     HERO
-====================== -->
+<!-- =========================
+HERO
+========================= -->
 
 <section class="hero" id="home">
 
@@ -486,16 +422,24 @@ Capture Your Best Moments
 </h1>
 
 <p>
-Professional Photography Services For Weddings, Events, Nature & Memories
+Professional Photography Services for Weddings, Events & Shoots
 </p>
+
+<button onclick="openPopup()">
+Book Now
+</button>
 
 </div>
 
 </section>
 
-<!-- ======================
-     RECENT PHOTOS
-====================== -->
+<!-- =========================
+LOCKED WEBSITE CONTENT
+========================= -->
+
+<div id="websiteContent" class="locked">
+
+<!-- RECENT PHOTOS -->
 
 <section>
 
@@ -515,9 +459,7 @@ Recent Photos
 
 </section>
 
-<!-- ======================
-     SERVICES
-====================== -->
+<!-- SERVICES -->
 
 <section id="services">
 
@@ -534,36 +476,49 @@ Our Services
 
 <div class="service-box">
 <h3>Pre Wedding Shoot</h3>
-<p>Creative Couple Outdoor Shoots</p>
+<p>Creative Outdoor Couple Shoots</p>
+</div>
+
+<div class="service-box">
+<h3>Post Wedding Shoot</h3>
+<p>Memorable Couple Story Sessions</p>
 </div>
 
 <div class="service-box">
 <h3>Baby Shoot</h3>
-<p>Memorable Kids Photography Sessions</p>
+<p>Beautiful Baby Photography Sessions</p>
 </div>
 
 <div class="service-box">
 <h3>Candid Photography</h3>
-<p>Natural Emotion Capturing</p>
+<p>Natural Emotion & Candid Moments</p>
 </div>
 
 <div class="service-box">
 <h3>Nature Photography</h3>
-<p>Beautiful Nature & Wildlife Photos</p>
+<p>Nature & Wildlife Professional Captures</p>
 </div>
 
 <div class="service-box">
-<h3>Drone Photography</h3>
-<p>Cinematic Aerial Shoots</p>
+<h3>Animals Photography</h3>
+<p>Creative Pet & Animal Photography</p>
+</div>
+
+<div class="service-box">
+<h3>Bird Photography</h3>
+<p>High Quality Bird Photography Shoots</p>
+</div>
+
+<div class="service-box">
+<h3>Flower Photography</h3>
+<p>Professional Floral Macro Photography</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- ======================
-     GALLERY
-====================== -->
+<!-- GALLERY -->
 
 <section id="gallery">
 
@@ -582,6 +537,38 @@ Gallery
 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop">
 
 <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop">
+
+</div>
+
+</div>
+
+<!-- PRE WEDDING -->
+
+<div class="gallery-category">
+
+<h3>Pre Wedding</h3>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=2070&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=2070&auto=format&fit=crop">
+
+</div>
+
+</div>
+
+<!-- BABY SHOOT -->
+
+<div class="gallery-category">
+
+<h3>Baby Shoot</h3>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?q=80&w=2070&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2070&auto=format&fit=crop">
 
 </div>
 
@@ -621,9 +608,7 @@ Gallery
 
 </section>
 
-<!-- ======================
-     CONTACT
-====================== -->
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
 
@@ -631,9 +616,9 @@ Gallery
 Contact Details
 </h2>
 
-<p>📞 +91 9886223558</p>
+<p>📞 +91 7411747509</p>
 
-<p>📧 kbcreations@gmail.com</p>
+<p>📧 kbcreations.2020@gmail.com</p>
 
 <p>📍 Bangalore, India</p>
 
@@ -645,9 +630,7 @@ Contact Details
 
 </section>
 
-<!-- ======================
-     SUBSCRIBE
-====================== -->
+<!-- SUBSCRIBE -->
 
 <section class="subscribe">
 
@@ -656,7 +639,7 @@ Subscribe & Share
 </h2>
 
 <p>
-Follow us for latest shoots & photography updates ❤️
+Follow us for latest shoots & updates ❤️
 </p>
 
 <input type="email" placeholder="Enter Your Email">
@@ -673,9 +656,9 @@ Thanks For Visiting KB Creations 📸
 
 </section>
 
-<!-- ======================
-     FOOTER
-====================== -->
+</div>
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -683,13 +666,83 @@ Thanks For Visiting KB Creations 📸
 
 </footer>
 
-<!-- ======================
-     JAVASCRIPT
-====================== -->
+<!-- =========================
+POPUP
+========================= -->
+
+<div class="popup" id="popup">
+
+<div class="popup-box" id="popupBox">
+
+<span class="close" onclick="closePopup()">
+×
+</span>
+
+<h1>
+Book Your Shoot
+</h1>
+
+<input type="text" id="name" placeholder="Enter Your Name">
+
+<input type="date" id="date">
+
+<input type="tel" id="mobile" placeholder="Enter Mobile Number">
+
+<select id="shootType">
+
+<option>Select Shoot Type</option>
+
+<option>Wedding Shoot</option>
+
+<option>Pre Wedding Shoot</option>
+
+<option>Post Wedding Shoot</option>
+
+<option>Baby Shoot</option>
+
+<option>Name Ceremony</option>
+
+<option>Candid Shoot</option>
+
+<option>Nature Photography</option>
+
+<option>Animals Photography</option>
+
+<option>Bird Photography</option>
+
+<option>Flower Photography</option>
+
+</select>
+
+<button onclick="submitForm()">
+Continue
+</button>
+
+<p id="msg"></p>
+
+</div>
+
+</div>
+
+<!-- =========================
+JAVASCRIPT
+========================= -->
 
 <script>
 
-function unlockWebsite(){
+function openPopup(){
+
+document.getElementById("popup").style.display="flex";
+
+}
+
+function closePopup(){
+
+document.getElementById("popup").style.display="none";
+
+}
+
+function submitForm(){
 
 let name=document.getElementById("name").value;
 let date=document.getElementById("date").value;
@@ -722,9 +775,9 @@ document.getElementById("msg").innerHTML=
 return;
 }
 
-/* WHATSAPP MESSAGE */
+/* WHATSAPP */
 
-let yourNumber="919886223558";
+let yourNumber="917411747509";
 
 let message=
 "New Photography Booking%0A%0A"+
@@ -740,18 +793,18 @@ window.open(
 
 /* THANK YOU SCREEN */
 
-document.querySelector(".lock-box").innerHTML=
+document.getElementById("popupBox").innerHTML=
 `
 
-<div class="brand">
-KB Creations
-</div>
-
-<h1 style="font-size:45px;">
+<h1 style="font-size:42px;color:#ffcc70;">
 Thanks For Choosing Us ❤️
 </h1>
 
-<p style="margin-top:20px;font-size:20px;line-height:1.7;">
+<p style="
+margin-top:20px;
+font-size:20px;
+line-height:1.7;
+">
 One Best Image Shoot Awaits You 📸
 </p>
 
@@ -759,13 +812,13 @@ One Best Image Shoot Awaits You 📸
 src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1974&auto=format&fit=crop"
 style="
 width:100%;
-margin-top:25px;
-border-radius:18px;
 height:250px;
 object-fit:cover;
+border-radius:18px;
+margin-top:25px;
 ">
 
-<button onclick="enterWebsite()"
+<button onclick="exploreWebsite()"
 style="
 margin-top:30px;
 width:100%;
@@ -784,9 +837,13 @@ Explore Website
 
 }
 
-function enterWebsite(){
+function exploreWebsite(){
 
-document.getElementById("lockScreen").style.display="none";
+document.getElementById("popup").style.display="none";
+
+document.getElementById("websiteContent").style.display="block";
+
+window.location.href="#services";
 
 }
 
