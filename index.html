@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KB Creations Photography</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:black;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#ffcc70;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:18px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ffcc70;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+background:rgba(0,0,0,0.6);
+padding:50px;
+border-radius:20px;
+}
+
+.hero h1{
+font-size:65px;
+color:#ffcc70;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+margin-bottom:30px;
+}
+
+.btn{
+padding:15px 35px;
+background:#ffcc70;
+color:black;
+font-size:18px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:white;
+}
+
+/* SERVICES */
+
+.services{
+padding:80px 8%;
+background:#1a1a1a;
+text-align:center;
+}
+
+.services h2{
+font-size:40px;
+color:#ffcc70;
+margin-bottom:50px;
+}
+
+.service-boxes{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+}
+
+.box{
+background:#222;
+padding:30px;
+width:300px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.box:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px rgba(255,204,112,0.7);
+}
+
+.box h3{
+color:#ffcc70;
+margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery{
+padding:80px 8%;
+text-align:center;
+}
+
+.gallery h2{
+font-size:40px;
+color:#ffcc70;
+margin-bottom:40px;
+}
+
+.gallery-images{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+.gallery-images img{
+width:300px;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+}
+
+/* CONTACT */
+
+.contact{
+padding:80px 8%;
+background:#1a1a1a;
+text-align:center;
+}
+
+.contact h2{
+font-size:40px;
+color:#ffcc70;
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:20px;
+margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+text-align:center;
+padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+KB Creations
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Capture Your Best Moments</h1>
+
+<p>
+Professional Photography Services for Weddings, Events & Shoots
+</p>
+
+<button class="btn">
+Book Now
+</button>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services">
+
+<h2>Our Photography Services</h2>
+
+<div class="service-boxes">
+
+<div class="box">
+<h3>Wedding Photography</h3>
+<p>
+Capturing beautiful wedding memories with cinematic style.
+</p>
+</div>
+
+<div class="box">
+<h3>Portrait Shoots</h3>
+<p>
+Professional portrait sessions with creative editing.
+</p>
+</div>
+
+<div class="box">
+<h3>Event Coverage</h3>
+<p>
+Complete photography coverage for all your special events.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+<h2>Our Gallery</h2>
+
+<div class="gallery-images">
+
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2070&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1974&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2070&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<p>📞 +91 1234567890</p>
+
+<p>📍 Bangalore, India</p>
+
+<p>📧 kbcreations@gmail.com</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 KB Creations Photography. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
