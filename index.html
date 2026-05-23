@@ -19,9 +19,12 @@ scroll-behavior:smooth;
 body{
 background:#111;
 color:white;
+overflow-x:hidden;
 }
 
-/* LOCK SCREEN */
+/* ======================
+   LOCK SCREEN
+====================== */
 
 #lockScreen{
 position:fixed;
@@ -29,64 +32,106 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2070&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
 display:flex;
 justify-content:center;
 align-items:center;
-z-index:9999;
+z-index:99999;
+padding:20px;
 }
 
 .lock-box{
-background:rgba(0,0,0,0.8);
-padding:40px;
-border-radius:20px;
+width:100%;
+max-width:450px;
+background:rgba(0,0,0,0.85);
+padding:40px 30px;
+border-radius:25px;
 text-align:center;
-width:90%;
-max-width:400px;
+border:1px solid rgba(255,204,112,0.3);
+backdrop-filter:blur(8px);
+}
+
+.brand{
+font-size:42px;
+font-weight:bold;
+color:#ffcc70;
+margin-bottom:10px;
+}
+
+.tagline{
+font-size:18px;
+margin-bottom:30px;
+color:#ddd;
 }
 
 .lock-box h1{
+font-size:48px;
 color:#ffcc70;
-margin-bottom:20px;
-font-size:40px;
+margin-bottom:25px;
+line-height:1.2;
 }
 
 .lock-box input,
 .lock-box select{
 width:100%;
-padding:14px;
-margin:10px 0;
+padding:16px;
+margin:12px 0;
 border:none;
-border-radius:10px;
+border-radius:12px;
 font-size:16px;
+outline:none;
+background:#f1f1f1;
 }
 
 .lock-box button{
-padding:14px 30px;
+width:100%;
+padding:16px;
+margin-top:18px;
 background:#ffcc70;
+color:black;
 border:none;
-border-radius:10px;
+border-radius:12px;
+font-size:18px;
 font-weight:bold;
 cursor:pointer;
-margin-top:10px;
+transition:0.3s;
 }
 
-/* HEADER */
+.lock-box button:hover{
+background:white;
+transform:scale(1.03);
+}
+
+#msg{
+margin-top:20px;
+color:#ffcc70;
+font-size:16px;
+}
+
+/* ======================
+   HEADER
+====================== */
 
 header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
 background:black;
-position:fixed;
-width:100%;
-top:0;
 z-index:1000;
+border-bottom:1px solid rgba(255,204,112,0.2);
 }
 
 .logo{
-font-size:30px;
+font-size:32px;
 font-weight:bold;
 color:#ffcc70;
 }
@@ -94,19 +139,26 @@ color:#ffcc70;
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
 font-size:18px;
+transition:0.3s;
 }
 
 nav a:hover{
 color:#ffcc70;
 }
 
-/* HERO */
+/* ======================
+   HERO
+====================== */
 
 .hero{
 height:100vh;
-background:url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2070&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -115,131 +167,224 @@ padding:20px;
 }
 
 .hero-box{
-background:rgba(0,0,0,0.7);
-padding:50px;
-border-radius:20px;
+background:rgba(0,0,0,0.65);
+padding:60px;
+border-radius:25px;
+max-width:900px;
 }
 
 .hero h1{
-font-size:60px;
+font-size:70px;
 color:#ffcc70;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:22px;
+font-size:24px;
+line-height:1.6;
 }
 
-/* SECTIONS */
+/* ======================
+   COMMON SECTION
+====================== */
 
 section{
-padding:80px 8%;
+padding:90px 8%;
 }
 
-h2{
+.section-title{
 text-align:center;
+font-size:45px;
 color:#ffcc70;
-font-size:40px;
-margin-bottom:40px;
+margin-bottom:50px;
 }
 
-/* RECENT PHOTOS */
+/* ======================
+   RECENT PHOTOS
+====================== */
 
-.photos{
+.photo-grid{
 display:flex;
 flex-wrap:wrap;
-gap:20px;
 justify-content:center;
+gap:25px;
 }
 
-.photos img{
-width:300px;
-height:220px;
+.photo-grid img{
+width:320px;
+height:230px;
 object-fit:cover;
-border-radius:15px;
+border-radius:18px;
+transition:0.3s;
 }
 
-/* SERVICES */
+.photo-grid img:hover{
+transform:scale(1.05);
+}
 
-.service-boxes{
+/* ======================
+   SERVICES
+====================== */
+
+.service-container{
 display:flex;
 flex-wrap:wrap;
-gap:20px;
 justify-content:center;
+gap:25px;
 }
 
-.box{
-background:#222;
+.service-box{
+background:#1d1d1d;
 padding:30px;
-width:280px;
-border-radius:15px;
+width:300px;
+border-radius:18px;
 text-align:center;
+transition:0.3s;
+border:1px solid rgba(255,204,112,0.1);
 }
 
-.box h3{
+.service-box:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px rgba(255,204,112,0.3);
+}
+
+.service-box h3{
 color:#ffcc70;
 margin-bottom:15px;
 }
 
-/* GALLERY */
+/* ======================
+   GALLERY
+====================== */
 
 .gallery-category{
-margin-bottom:50px;
+margin-bottom:70px;
+}
+
+.gallery-category h3{
+color:#ffcc70;
+font-size:35px;
+margin-bottom:25px;
+text-align:center;
 }
 
 .gallery-grid{
 display:flex;
 flex-wrap:wrap;
-gap:20px;
 justify-content:center;
+gap:20px;
 }
 
 .gallery-grid img{
-width:280px;
+width:300px;
 height:220px;
 object-fit:cover;
-border-radius:15px;
+border-radius:18px;
+transition:0.3s;
 }
 
-/* CONTACT */
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* ======================
+   CONTACT
+====================== */
+
+.contact{
+text-align:center;
+}
 
 .contact p{
-text-align:center;
-margin:10px 0;
-font-size:20px;
+font-size:22px;
+margin:14px 0;
 }
 
-/* SUBSCRIBE */
+/* ======================
+   SUBSCRIBE
+====================== */
 
 .subscribe{
-text-align:center;
 background:#1a1a1a;
-padding:50px;
+text-align:center;
+padding:70px 20px;
 }
 
 .subscribe input{
-padding:14px;
-width:300px;
+width:320px;
+max-width:90%;
+padding:16px;
 border:none;
-border-radius:10px;
+border-radius:12px;
+font-size:16px;
+margin-top:20px;
 }
 
 .subscribe button{
-padding:14px 25px;
+padding:16px 30px;
 background:#ffcc70;
 border:none;
-border-radius:10px;
+border-radius:12px;
 font-weight:bold;
 margin-left:10px;
+cursor:pointer;
+margin-top:20px;
 }
 
-/* FOOTER */
+/* ======================
+   FOOTER
+====================== */
 
 footer{
 background:black;
-padding:20px;
+padding:25px;
 text-align:center;
-margin-top:40px;
+font-size:18px;
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.hero-box{
+padding:30px;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+margin:0 10px;
+font-size:16px;
+}
+
+.logo{
+font-size:28px;
+}
+
+.brand{
+font-size:34px;
+}
+
+.lock-box h1{
+font-size:38px;
+}
+
 }
 
 </style>
@@ -247,13 +392,25 @@ margin-top:40px;
 
 <body>
 
-<!-- LOCK SCREEN -->
+<!-- ======================
+     LOCK SCREEN
+====================== -->
 
 <div id="lockScreen">
 
 <div class="lock-box">
 
-<h1>Book Your Shoot</h1>
+<div class="brand">
+KB Creations
+</div>
+
+<div class="tagline">
+Professional Photography Studio 📸
+</div>
+
+<h1>
+Book Your Shoot
+</h1>
 
 <input type="text" id="name" placeholder="Enter Your Name">
 
@@ -262,29 +419,44 @@ margin-top:40px;
 <input type="tel" id="mobile" placeholder="Enter Mobile Number">
 
 <select id="shootType">
+
 <option>Select Shoot Type</option>
+
 <option>Wedding Shoot</option>
-<option>Pre Wedding</option>
-<option>Post Wedding</option>
+
+<option>Pre Wedding Shoot</option>
+
+<option>Post Wedding Shoot</option>
+
 <option>Baby Shoot</option>
+
 <option>Name Ceremony</option>
+
 <option>Candid Shoot</option>
-<option>Nature Shoot</option>
+
+<option>Nature Photography</option>
+
+<option>Animals Photography</option>
+
 <option>Bird Photography</option>
+
 <option>Flower Photography</option>
+
 </select>
 
 <button onclick="unlockWebsite()">
 Continue
 </button>
 
-<p id="msg" style="margin-top:20px;color:#ffcc70;"></p>
+<p id="msg"></p>
 
 </div>
 
 </div>
 
-<!-- WEBSITE -->
+<!-- ======================
+     HEADER
+====================== -->
 
 <header>
 
@@ -301,29 +473,37 @@ KB Creations
 
 </header>
 
-<!-- HERO -->
+<!-- ======================
+     HERO
+====================== -->
 
 <section class="hero" id="home">
 
 <div class="hero-box">
 
-<h1>Capture Your Best Moments</h1>
+<h1>
+Capture Your Best Moments
+</h1>
 
 <p>
-Professional Photography For Every Special Occasion
+Professional Photography Services For Weddings, Events, Nature & Memories
 </p>
 
 </div>
 
 </section>
 
-<!-- RECENT PHOTOS -->
+<!-- ======================
+     RECENT PHOTOS
+====================== -->
 
 <section>
 
-<h2>Recent Photos</h2>
+<h2 class="section-title">
+Recent Photos
+</h2>
 
-<div class="photos">
+<div class="photo-grid">
 
 <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2070&auto=format&fit=crop">
 
@@ -335,57 +515,67 @@ Professional Photography For Every Special Occasion
 
 </section>
 
-<!-- SERVICES -->
+<!-- ======================
+     SERVICES
+====================== -->
 
 <section id="services">
 
-<h2>Our Services</h2>
+<h2 class="section-title">
+Our Services
+</h2>
 
-<div class="service-boxes">
+<div class="service-container">
 
-<div class="box">
+<div class="service-box">
 <h3>Wedding Photography</h3>
-<p>Traditional + Cinematic Wedding Coverage</p>
+<p>Traditional & Cinematic Wedding Coverage</p>
 </div>
 
-<div class="box">
+<div class="service-box">
 <h3>Pre Wedding Shoot</h3>
-<p>Creative Outdoor Couple Shoots</p>
+<p>Creative Couple Outdoor Shoots</p>
 </div>
 
-<div class="box">
+<div class="service-box">
 <h3>Baby Shoot</h3>
-<p>Memorable Baby Photography Sessions</p>
+<p>Memorable Kids Photography Sessions</p>
 </div>
 
-<div class="box">
-<h3>Nature Photography</h3>
-<p>Beautiful Nature & Wildlife Captures</p>
-</div>
-
-<div class="box">
+<div class="service-box">
 <h3>Candid Photography</h3>
-<p>Natural Emotion & Candid Moments</p>
+<p>Natural Emotion Capturing</p>
 </div>
 
-<div class="box">
-<h3>Drone Shoots</h3>
-<p>Cinematic Aerial Photography</p>
+<div class="service-box">
+<h3>Nature Photography</h3>
+<p>Beautiful Nature & Wildlife Photos</p>
+</div>
+
+<div class="service-box">
+<h3>Drone Photography</h3>
+<p>Cinematic Aerial Shoots</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- GALLERY -->
+<!-- ======================
+     GALLERY
+====================== -->
 
 <section id="gallery">
 
-<h2>Gallery</h2>
+<h2 class="section-title">
+Gallery
+</h2>
+
+<!-- WEDDING -->
 
 <div class="gallery-category">
 
-<h2>Wedding</h2>
+<h3>Wedding</h3>
 
 <div class="gallery-grid">
 
@@ -397,9 +587,11 @@ Professional Photography For Every Special Occasion
 
 </div>
 
+<!-- NATURE -->
+
 <div class="gallery-category">
 
-<h2>Nature</h2>
+<h3>Nature</h3>
 
 <div class="gallery-grid">
 
@@ -411,13 +603,33 @@ Professional Photography For Every Special Occasion
 
 </div>
 
+<!-- BIRDS -->
+
+<div class="gallery-category">
+
+<h3>Birds</h3>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1501706362039-c6e13b4f69e1?q=80&w=2070&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2070&auto=format&fit=crop">
+
+</div>
+
+</div>
+
 </section>
 
-<!-- CONTACT -->
+<!-- ======================
+     CONTACT
+====================== -->
 
 <section id="contact" class="contact">
 
-<h2>Contact Us</h2>
+<h2 class="section-title">
+Contact Details
+</h2>
 
 <p>📞 +91 9886223558</p>
 
@@ -433,29 +645,47 @@ Professional Photography For Every Special Occasion
 
 </section>
 
-<!-- SUBSCRIBE -->
+<!-- ======================
+     SUBSCRIBE
+====================== -->
 
 <section class="subscribe">
 
-<h2>Subscribe & Share</h2>
+<h2 class="section-title">
+Subscribe & Share
+</h2>
+
+<p>
+Follow us for latest shoots & photography updates ❤️
+</p>
 
 <input type="email" placeholder="Enter Your Email">
 
-<button>Subscribe</button>
+<br>
 
-<p style="margin-top:20px;">
-Thanks For Visiting KB Creations ❤️
+<button>
+Subscribe
+</button>
+
+<p style="margin-top:30px;">
+Thanks For Visiting KB Creations 📸
 </p>
 
 </section>
 
-<!-- FOOTER -->
+<!-- ======================
+     FOOTER
+====================== -->
 
 <footer>
 
-© 2026 KB Creations Photography
+© 2026 KB Creations Photography. All Rights Reserved.
 
 </footer>
+
+<!-- ======================
+     JAVASCRIPT
+====================== -->
 
 <script>
 
@@ -494,7 +724,7 @@ return;
 
 /* WHATSAPP MESSAGE */
 
-let yourNumber="917411747509";
+let yourNumber="919886223558";
 
 let message=
 "New Photography Booking%0A%0A"+
@@ -508,28 +738,48 @@ window.open(
 "_blank"
 );
 
-/* THANK YOU */
+/* THANK YOU SCREEN */
 
 document.querySelector(".lock-box").innerHTML=
 `
-<h1>Thanks For Choosing Us ❤️</h1>
 
-<p style="margin-top:20px;font-size:20px;">
+<div class="brand">
+KB Creations
+</div>
+
+<h1 style="font-size:45px;">
+Thanks For Choosing Us ❤️
+</h1>
+
+<p style="margin-top:20px;font-size:20px;line-height:1.7;">
 One Best Image Shoot Awaits You 📸
 </p>
+
+<img 
+src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1974&auto=format&fit=crop"
+style="
+width:100%;
+margin-top:25px;
+border-radius:18px;
+height:250px;
+object-fit:cover;
+">
 
 <button onclick="enterWebsite()"
 style="
 margin-top:30px;
-padding:14px 25px;
+width:100%;
+padding:16px;
 background:#ffcc70;
 border:none;
-border-radius:10px;
+border-radius:12px;
+font-size:18px;
 font-weight:bold;
 cursor:pointer;
 ">
 Explore Website
 </button>
+
 `;
 
 }
